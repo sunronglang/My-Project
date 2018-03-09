@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的主页</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/blocksit.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.tabs.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <!-- 左侧导航栏 -->
+    <header class="head">
+        <!-- 圆圈 -->
+        <div class="green_cycle">
+            <img class="green_cycle_img" src="images/green_cycle.svg">
+            <div class="yellow_cycle">
+                <img class="yellow_cycle_img" src="images/yellow_cycle.svg">
+                <div class="red_cycle">
+                    <img class="red_cycle_img" src="images/red_cycle.svg">
+                    <div class="head_img_div">
+                        <img class="head_img" src="images/head.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 导航条 -->
+        <div class="head_nav_div">
+            <nav class="head_nav">
+                <ul>
+                    <li><a href="#"><span style="background: #ffd204;margin-top: 0px">首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页</span></a></li>
+                    <li><a href="#"><span>个人历程</span></a></li>
+                    <li><a href="#"><span>作品展示</span></a></li>
+                    <li><a href="#"><span>相&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;册</span></a></li>
+                    <li><a href="#"><span>联系方式</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- home -->
+    <div class="home BOX">
+        <div class="home_div boxWidth">
+            <div class="fill">
+                <div class="clock" id="digital_clock">
+                    <div class="centre">
+                        <div class="dynamic"></div>
+                        <div class="round circle_1"></div>
+                        <div class="round circle_2"></div>
+                        <div class="round circle_3"></div>
+                        <div class="anchor hour">
+                            <div class="element thin_hand"></div>
+                            <div class="element fat_hand"></div>
+                        </div>
+                        <div class="anchor minute">
+                            <div class="element thin_hand"></div>
+                            <div class="element fat_hand minute_hand"></div>
+                        </div>
+                        <div class="anchor second">
+                            <div class="element second_hand"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- msg -->
+    <div class="msg BOX selectAll">
+        <div class="msg_div boxWidth">
+            <div class="msg_wrapper">
+                <div class="light"><i></i></div>
+                <hr class="line_left">
+                <hr class="line_right">
+                <div class="main">
+                    <h1 class="title">孙荣朗的历程</h1>
+                    <div class="year">
+                        <h2><a href="#">2018<i></i></a></h2>
+                        <div class="list">
+                            <ul>
+                                <li class="cls highLight">
+                                    <p class="date">1月</p>
+                                    <p class="intro">离开傲基</p>
+                                    <p class="version">&nbsp;</p>
+                                    <div class="more">
+                                        <p>很忙很充实</p>
+                                        <p>澳大利亚站点的ebay运营</p>
+                                        <p>研究产品listing-内容翻译-热销产品</p>
+                                        <p>想要开发自己的网站-接触前端</p>
+                                        <p>公司离宿舍70min车程-大小周-挤时间</p>
+                                        <p>手机端W3Cschool、微信公众号菜鸟教程开启学习之旅</p>
+                                        <p>html-css-javascript-html5-css3</p>
+                                        <p>ATOM编译器</p>
+                                        <p>看demo-看视频-敲代码</p>
+                                        <p>jquery-jqueryUI-bootstrap</p>
+                                        <p>知乎/百度/CSDN博客/张鑫旭博客/设计达人...</p>
+                                        <p>尝试自己写一个网页</p>
+                                        ......
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="year">
+                        <h2><a href="#">2017<i></i></a></h2>
+                        <div class="list">
+                            <ul>
+                                <li class="cls">
+                                    <p class="date">2月</p>
+                                    <p class="intro">入职傲基跨境电商</p>
+                                    <p class="version">&nbsp;</p>
+                                    <div class="more">
+                                        <p>从事电商运营工作</p>
+                                    </div>
+                                </li>
+                                <li class="cls">
+                                    <p class="date">1月</p>
+                                    <p class="intro">离开光联</p>
+                                    <p class="version">&nbsp;</p>
+                                    <div class="more">
+                                        <p>社会洗礼-褪去稚嫩</p>
+                                        <p>打电话-见客户-研究话术、心理</p>
+                                        <p>爬山-阅读-唱K-会展-漫展</p>
+                                        <p>听听英语-捡一点回来</p>
+                                        <p>分手-回归单身</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="year">
+                        <h2><a href="#">2016<i></i></a></h2>
+                        <div class="list">
+                            <ul>
+                                <li class="cls">
+                                    <p class="date">7月</p>
+                                    <p class="intro">启程深圳</p>
+                                    <p class="version">&nbsp;</p>
+                                    <div class="more">
+                                        <p>深圳光联世纪--销售代表</p>
+                                    </div>
+                                </li>
+                                <li class="cls">
+                                    <p class="date">6月</p>
+                                    <p class="intro">大学生涯结束</p>
+                                    <p class="version">&nbsp;</p>
+                                    <div class="more">
+                                        <p>这一年、初恋</p>
+                                        <p>完成学业</p>
+                                        <p>半吊子的嵌入式最终还是没能找到实习</p>
+                                        <p>社会初体验-家家顺置业顾问实习生</p>
+                                        <p>离职-回校-丰乐最后一聚-好聚好散-祝好</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="year">
+                        <h2><a href="#">2015<i></i></a></h2>
+                        <div class="list">
+                            <ul>
+                                <li class="cls">
+                                    <p class="date">9月</p>
+                                    <p class="intro">开启大四</p>
+                                    <p class="version">&nbsp;</p>
+                                    <div class="more">
+                                        <p>不知道干了些神马的迷之暑假</p>
+                                    </div>
+                                </li>
+                                <li class="cls">
+                                    <p class="date">6月</p>
+                                    <p class="intro">大三结束</p>
+                                    <p class="version">&nbsp;</p>
+                                    <div class="more">
+                                        <p>大学生涯最忙的一年</p>
+                                        <p>上不完的专业课</p>
+                                        <p>上任班干部团支书</p>
+                                        <p>图书馆宅</p>
+                                        <p>动漫宅</p>
+                                        <p>在图书馆与小师妹第一次会面</p>
+                                        <p>接触嵌入式</p>
+                                        <p>接触Linux</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="year">
+                        <h2><a href="#">2014<i></i></a></h2>
+                        <div class="list">
+                            <ul>
+                                <li class="cls">
+                                    <p class="date">9月</p>
+                                    <p class="intro">开启大三</p>
+                                    <p class="version">&nbsp;</p>
+                                    <div class="more">
+                                        <p>不知道干了些神马的迷之暑假</p>
+                                    </div>
+                                </li>
+                                <li class="cls">
+                                    <p class="date">6月</p>
+                                    <p class="intro">大二结束</p>
+                                    <p class="version">&nbsp;</p>
+                                    <div class="more">
+                                        <p>发生了人生中的很多第一次</p>
+                                        <p>兼职赚钱买了第一辆车-中国制造xx牌自行车</p>
+                                        <p>第一次接触单片机</p>
+                                        <p>第一次用电烙铁</p>
+                                        <p>第一次接触编程C语言</p>
+                                        <p>第一次搭讪女孩子</p>
+                                        <p>第一次做家教</p>
+                                        <p>第一次参加马拉松竞走</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="year">
+                        <h2><a href="#">2013<i></i></a></h2>
+                        <div class="list">
+                            <ul>
+
+                                <li class="cls highLight">
+                                    <p class="date">11月</p>
+                                    <p class="intro">11日，很丧的一天</p>
+                                    <p class="version">&nbsp;</p>
+                                    <div class="more">
+                                        <p>向女神表白失败</p>
+                                        <p>告别过去</p>
+                                    </div>
+                                </li>
+                                <li class="cls">
+                                    <p class="date">9月</p>
+                                    <p class="intro">开启大二</p>
+                                    <p class="version">&nbsp;</p>
+                                    <div class="more">
+                                        <p>不知道干了些神马的迷之暑假</p>
+                                    </div>
+                                </li>
+                                <li class="cls">
+                                    <p class="date">6月</p>
+                                    <p class="intro">大一结束</p>
+                                    <p class="version">&nbsp;</p>
+                                    <div class="more">
+                                        <p>认识了室友欧狗蛋、彭狗蛋、二狗蛋</p>
+                                        <p>军训后拉近了同学关系</p>
+                                        <p>加入毽球社</p>
+                                        <p>加入文学社</p>
+                                        <p>加入羽毛球社</p>
+                                        <p>偶尔游泳</p>
+                                        <p>看看动漫</p>
+                                        <p>兼职发传单</p>
+                                        <p>泡泡图书馆</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="year">
+                        <h2><a href="#">2012<i></i></a></h2>
+                        <div class="list">
+                            <ul>
+                                <li class="cls">
+                                    <p class="date">9月</p>
+                                    <p class="intro">开启大学生涯</p>
+                                    <p class="version">&nbsp;</p>
+                                    <div class="more">
+                                        <p>五邑大学</p>
+                                        <p>信息工程学院</p>
+                                        <p>电子信息工程专业</p>
+                                        <p>120704班43栋612寝室</p>
+                                        <p>带着憧憬、迷茫和求知欲...</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- project -->
+    <div class="project BOX selectAll">
+        <div class="project_div boxWidth">
+            <div id="accordion">
+                <div class="slider">
+                    <img class="slide" src="images/project/1.png" alt="">
+                    <div class="text">
+                        <a class="title" href="https://github.com/sunronglang/My-Project.git" target="_blank">点击跳转Github</a> 我的主页
+                    </div>
+                </div>
+                <div class="slider">
+                    <img class="slide" src="images/project/2.png" alt="">
+                    <div class="text">
+                        <a class="title" href="https://github.com/sunronglang/My-Project.git" target="_blank">点击跳转Github</a> 鼠标控制图片转速转向
+                    </div>
+                </div>
+                <div class="slider">
+                    <img class="slide" src="images/project/3.png" alt="">
+                    <div class="text">
+                        <a class="title" href="https://github.com/sunronglang/My-Project.git" target="_blank">点击跳转Github</a> jquery瀑布流
+                    </div>
+                </div>
+                <div class="slider">
+                    <img class="slide" src="images/project/4.png" alt="">
+                    <div class="text">
+                        <a class="title" href="https://github.com/sunronglang/My-Project.git" target="_blank">点击跳转Github</a> js瀑布流
+                    </div>
+                </div>
+                <div class="slider">
+                    <img class="slide" src="images/project/5.png" alt="">
+                    <div class="text">
+                        <a class="title" href="https://github.com/sunronglang/My-Project.git" target="_blank">点击跳转Github</a> js手风琴折叠菜单
+                    </div>
+                </div>
+                <div class="slider">
+                    <img class="slide" src="images/project/6.png" alt="">
+                    <div class="text">
+                        <a class="title" href="https://github.com/sunronglang/My-Project.git" target="_blank">点击跳转Github</a> bootstrap自适应官网
+                    </div>
+                </div>
+                <div class="slider">
+                    <img class="slide" src="images/project/7.png" alt="">
+                    <div class="text">
+                        <a class="title" href="https://github.com/sunronglang/My-Project.git" target="_blank">点击跳转Github</a> bootstrap后台管理界面
+                    </div>
+                </div>
+                <div class="slider">
+                    <img class="slide" src="images/project/8.png" alt="">
+                    <div class="text">
+                        <a class="title" href="https://github.com/sunronglang/My-Project.git" target="_blank">点击跳转Github</a> 纯CSS百叶窗轮播图
+                    </div>
+                </div>
+                <div class="slider">
+                    <img class="slide" src="images/project/9.png" alt="">
+                    <div class="text">
+                        <a class="title" href="https://github.com/sunronglang/My-Project.git" target="_blank">点击跳转Github</a> 点击查看大图
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- photo -->
+    <div class="photo BOX selectAll">
+        <div class="photo_div boxWidth">
+            <div class="top bg">
+            </div>
+
+            <nav class="photo_nav">
+            </nav>
+
+            <div class="photo_wrapper">
+                <div id="container">
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/1.png"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/2.jpg"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/3.jpg"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/4.jpg"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/5.jpg"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/6.jpg"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/7.gif"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/8.gif"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/9.jpg"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/10.gif"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/11.jpg"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/12.jpg"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/13.jpg"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/14.jpg"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/15.gif"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/16.gif"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/17.jpg"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/18.jpg"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/19.jpg"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/20.jpg"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/21.jpg"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/22.jpg"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/23.jpg"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/24.jpg"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                    <div class="grid">
+                        <div class="vibrate"><img src="images/photo/25.jpg"></div>
+                        <h3>这里是标题</h3>
+                        <p>这里是文字描述</p>
+                        <div class="meta">日期或者其他</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom bg">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- contact -->
+    <div class="contact BOX selectAll">
+        <div class="contact_div boxWidth">
+            <div class="page_wrapper">
+                <h1>动态信息选项卡<span>Dynamic Information Tab</span></h1>
+                <div id="tab_design" class="tabs">
+                    <nav class="tab_menu clearfix">
+                        <ul>
+                            <li>
+                                <a href="#about">
+                                    <img src="images/contact/about_icon.png" alt="">关于
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#phone">
+                                    <img src="images/contact/phone_icon.png" alt="">手机
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#mailbox">
+                                    <img src="images/contact/mailbox_icon.png" alt="">邮箱
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#QQ">
+                                    <img src="images/contact/QQ_icon.png" alt="">QQ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#wechat">
+                                    <img src="images/contact/wechat_icon.png" alt="">微信
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#github">
+                                    <img src="images/contact/github_icon.png" alt="">Github
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="tab_contents">
+                        <ul>
+                            <li id="about">
+                                <a href="#">
+                                        <img src="images/contact/about.png" width="138" height="148" style="position:relative; top:-10px">
+                                        <img class="about_me" src="images/contact/about_me.png">
+                                    </a>
+                                <div class="text">
+                                    <h3>姓 名: 孙荣朗</h3>
+                                    <p>性 别: 男</p>
+                                    <p>年 龄: 25</p>
+                                    <p>籍 贯: 广东阳江</p>
+                                </div>
+                                <div class="text">
+                                    <h3>学 校: 五邑大学</h3>
+                                    <p>专 业: 电子信息工程</p>
+                                    <p>学 历: 本科</p>
+                                    <p>英 语: 四级</p>
+                                </div>
+                            </li>
+                            <li id="phone">
+                                <img src="images/contact/phone.png" alt="" width="128" height="128">
+                                <div class="text">
+                                    <h3>手机：</h3>
+                                    <p>137 287 007 64</p>
+                                </div>
+                            </li>
+                            <li id="mailbox">
+                                <img src="images/contact/mailbox.png" alt="" width="128" height="128">
+                                <div class="text">
+                                    <h3>邮箱：</h3>
+                                    <p>260754200@qq.com</p>
+                                </div>
+                            </li>
+                            <li id="QQ">
+                                <a href="#">
+                                        <img src="images/contact/QQ.png" width="128" height="128">
+                                        <img class="QQ_core" src="images/contact/QQ_core.jpg">
+                                    </a>
+                                <div class="text">
+                                    <h3>QQ(扫二维码)：</h3>
+                                    <p>260754200</p>
+                                </div>
+                            </li>
+                            <li id="wechat">
+                                <a href="#">
+                                        <img src="images/contact/wechat.png" width="128" height="128">
+                                        <img class="wechat_core" src="images/contact/wechat_core.png">
+                                    </a>
+                                <div class="text">
+                                    <h3>微信(扫二维码)：</h3>
+                                    <p>L-duke</p>
+                                </div>
+                            </li>
+                            <li id="github">
+                                <img src="images/contact/github.png" alt="" width="128" height="128">
+                                <div class="text">
+                                    <h3>源码地址：</h3>
+                                    <a href="https://github.com/sunronglang/My-Page.git" target="_blank">https://github.com/sunronglang/My-Page.git</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
