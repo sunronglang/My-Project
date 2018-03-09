@@ -1,0 +1,49 @@
+body{
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+.progress{
+    margin-bottom: 15px;
+}
+
+.wh64{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.mar_t15{
+    margin-top: 12px;
+}
+
+.page-header{
+    margin-top: 0;
+}
+
+.page-header h1{
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* user_search */
+.user_search{
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+/* tag */
+.taglist{
+    padding-top: 15px;
+}
+
+.taglist .alert{
+    margin: 0 15px 15px ;
+}
+
+footer{
+    font-weight: normal;
+    text-align: center;
+    padding: 20px;
+}
