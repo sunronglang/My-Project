@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>js手风琴二级菜单</title>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url("bg.png") repeat;
+            font-family: "楷体";
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        /* ---------------------------一级菜单---------------------------------- */
+        .accordion {
+            width: 100%;
+            max-width: 300px;
+            background: #fff;
+            margin: 50px auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .accordion .link {
+            position: relative;
+            cursor: pointer;
+            padding: 15px 15px 15px 40px;
+            color: #4d4d4d;
+            font-weight: bold;
+            font-size: 18px;
+            border-bottom: 1px solid #ccc;
+            -webkit-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+        }
+
+        .accordion li:last-child .link {
+            border-bottom: 0;
+        }
+
+        .accordion li i {
+            position: absolute;
+            top: 16px;
+            left: 12px;
+            -webkit-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+        }
+
+        .accordion li i.fa-chevron-down {
+            left: auto;
+            right: 12px;
+            font-size: 16px;
+        }
+
+        .accordion li.open .link {
+            color: #b22222;
+        }
+
+        .accordion li.open i.fa-chevron-down {
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+        /* ---------------------------二级菜单-------------------------- */
+        .submenu {
+            height: 0px;
+            overflow: hidden;
+            background: url("bg.png");
+            font-size: 16px;
+            -webkit-transition: all 0.6s ease;
+            -o-transition: all 0.6s ease;
+            transition: all 0.6s ease;
+        }
+
+        .submenu li {
+            border-bottom: 1px solid rgba(75, 74, 94, 0.1);
+        }
+
+        .submenu a {
+            display: block;
+            color: #b22222;
+            padding: 10px;
+            font-size: 18px;
+            padding-left: 40px;
+            -webkit-transition: all 0.25s ease;
+            -o-transition: all 0.25s ease;
+            transition: all 0.25s ease;
+        }
+
+        .submenu a:hover {
+            color: #4d4d4d;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var links = document.querySelectorAll(".link");
+            var flag = true;
+            var index = 10;
+
+            for (var i = 0; i < links.length; i++) {
+                links[i].index = i;
+
+                links[i].onclick = function() {
+                    if (flag) {
+                        this.parentNode.className = "open";
+                        this.nextSibling.nextSibling.style.height = "168px";
+                        flag = false;
+                        index = this.index;
+                    } else if (this.index == index) {
+                        this.parentNode.classList.remove("open");
+                        this.nextSibling.nextSibling.style.height = "0px";
+                        flag = true;
+                    } else {
+                        links[index].parentNode.classList.remove("open");
+                        links[index].nextSibling.nextSibling.style.height = "0px";
+                        this.parentNode.className = "open";
+                        this.nextSibling.nextSibling.style.height = "168px";
+                        flag = false;
+                        index = this.index;
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <ul id="accordion" class="accordion">
+        <li>
+            <div class="link">
+                <i class="fa fa-book"></i> 喜欢的书籍
+                <i class="fa fa-chevron-down"></i>
+            </div>
+            <ul class="submenu">
+                <li><a href="#">东野圭吾-白夜行</a></li>
+                <li><a href="#">柴静-看见</a></li>
+                <li><a href="#">福莱特-巨人的陨落</a></li>
+                <li><a href="#">加布瑞埃拉-岛上书店</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="link">
+                <i class="fa fa-flag"></i> 喜欢的运动
+                <i class="fa fa-chevron-down"></i>
+            </div>
+            <ul class="submenu">
+                <li><a href="#">游泳</a></li>
+                <li><a href="#">羽毛球</a></li>
+                <li><a href="#">爬山</a></li>
+                <li><a href="#">散步</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="link">
+                <i class="fa fa-music"></i> 最爱的歌曲
+                <i class="fa fa-chevron-down"></i>
+            </div>
+            <ul class="submenu">
+                <li><a href="#">晴天</a></li>
+                <li><a href="#">心淡</a></li>
+                <li><a href="#">说谎</a></li>
+                <li><a href="#">外婆的话</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="link">
+                <i class="fa fa-tv"></i> 最爱的动漫
+                <i class="fa fa-chevron-down"></i>
+            </div>
+            <ul class="submenu">
+                <li><a href="#">火影忍者</a></li>
+                <li><a href="#">海贼王</a></li>
+                <li><a href="#">刀剑神域</a></li>
+                <li><a href="#">心理测量者</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>
