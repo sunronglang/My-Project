@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标控制图片转速转向</title>
+    <style>
+        body{
+            background: url("images/bg.jpg") repeat;    
+        }
+
+        #wrap{
+            position: absolute;
+            width: 1000px;
+            height: 500px;
+            left: 50%;
+            top: 50%;
+            margin-left: -500px;
+            margin-top: -250px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            for(var i=1; i<9; i++){
+                var img = document.createElement("img");
+                img.id = "img" + i;
+                img.src = "images/" + "p" + i + ".jpg";
+                img.style.cssText = "position: absolute;";
+                document.getElementById("wrap").appendChild(img);
+            }
+            m = 10;
+
+        };
+
+        document.onmousemove = function(e){
+            var e = e || window.event;
+            m = (e.clientX - screen.width / 2) / 100;
+        }
+
+        n = 0;
+
+        function rr(){
+            n += m;
+
+            for(var j=1; j<9; j++){
+                document.getElementById("img" + j).style.left = Math.cos(Math.PI / 180 * (n + j * 45)) * 300 + 375 - (Math.sin(Math.PI/180 * (n + j * 45)) * 50)  + "px";
+                document.getElementById("img" + j).style.top = 150 - Math.sin(Math.PI / 180 * (n + j * 45)) * 50 + "px";
+                document.getElementById("img" + j).style.width = Math.sin(Math.PI/180 * (n + j * 45)) * 50 + 250 + "px";
+                document.getElementById("img" + j).style.height = Math.sin(Math.PI / 180 * (n + j * 45)) * 50 + 250 + "px";
+                document.getElementById("img" + j).style.zIndex = Math.round(Math.sin(Math.PI / 180 * (n + j * 45)) * 10);
+            }
+        }
+
+        setInterval("rr()", 30);
+    </script>
+</head>
+<body>
+    <div id="wrap"></div>
+</body>
+</html>
