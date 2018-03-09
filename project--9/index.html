@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>点击查看大图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap{
+            width: 1000px;
+            height: 630px;
+            margin: 0 auto;
+        }
+
+        .list li{
+            list-style: none;
+            float: left;
+            font-size: 0;
+            margin: 10px 20px;
+            box-shadow: 2px 2px 5px #333;
+            /* 作用于阴影 */
+            border-radius: 5px;
+        }
+
+        #bg{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(000, 000, 000, 0.7);
+            display: none;
+        }
+
+        #big{
+            width: 650px;
+            height: 406px;
+            position: absolute;
+            border: 10px solid #fff;
+            display: none;
+        }
+
+        #left, #right{
+            position: absolute;
+            top: 180px;
+            cursor: pointer;
+        }
+
+        #left{
+            left: -60px;
+        }
+
+        #right{
+            right: -60px;
+        }
+
+        #img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var wrap = document.getElementById("wrap");
+            var bg = document.getElementById("bg");
+            var big = document.getElementById("big");
+            var left = document.getElementById("left");
+            var right = document.getElementById("right");
+            var img = document.getElementById("img");
+            var link = document.getElementsByTagName("a");
+            var cur = 0;
+
+            for(var i=0; i<link.length; i++){
+                link[i].index = i;
+
+                //点击显示大图
+                link[i].onclick = function(){
+                    var src = this.href;
+                    cur = this.index;
+
+                    bg.style.display = "block";
+                    big.style.display = "block";
+                    big.style.left = big.style.top = "50%";
+                    big.style.marginLeft = -big.offsetWidth / 2 + "px";
+                    big.style.marginTop = -big.offsetHeight / 2 + "px";
+                    img.src =  src;
+
+                    // 点击左按钮
+                    left.onclick = function(){
+                        cur--;
+                        if(cur < 0){
+                            cur = link.length - 1;
+                        }
+                        img.src = link[cur].href;
+                    };
+
+                    //点击右按钮
+                    right.onclick = function(){
+                        cur++;
+                        if(cur >= link.length){
+                            cur = 0;
+                        }
+                        img.src = link[cur].href;
+                    };
+
+                    //阻止a的默认跳转
+                    return false;
+                };
+            }
+
+            // 点击其他地方大图消失
+            bg.onclick = function(){
+                bg.style.display = "none";
+                big.style.display = "none";
+            };
+        };
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="list">
+            <ul>
+                <li><a href="images/b1.jpg"><img src="images/s1.jpg" alt=""></a></li>
+                <li><a href="images/b2.jpg"><img src="images/s2.jpg" alt=""></a></li>
+                <li><a href="images/b3.jpg"><img src="images/s3.jpg" alt=""></a></li>
+                <li><a href="images/b4.jpg"><img src="images/s4.jpg" alt=""></a></li>
+                <li><a href="images/b5.jpg"><img src="images/s5.jpg" alt=""></a></li>
+                <li><a href="images/b6.jpg"><img src="images/s6.jpg" alt=""></a></li>
+                <li><a href="images/b7.jpg"><img src="images/s7.jpg" alt=""></a></li>
+                <li><a href="images/b8.jpg"><img src="images/s8.jpg" alt=""></a></li>
+                <li><a href="images/b9.jpg"><img src="images/s9.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <div id="bg"></div>
+        <div id="big">
+            <img src="images/dirl.png" id="left">
+            <img src="images/dirr.png" id="right">
+            <img src="" id="img">
+        </div>
+    </div>
+</body>
+</html>
