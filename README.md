@@ -1,6 +1,6 @@
 ### 点击可查看效果<br>
 1、[我的主页](https://sunronglang.github.io/My-Project/project--1/index.html)<br>
-2、[鼠标控制图片转速转向](http://htmlpreview.github.io/?https://sunronglang.github.io/My-Project/project--2/index.html)<br>
+2、[鼠标控制图片转速转向](https://sunronglang.github.io/My-Project/project--2/index.html)<br>
 3、[	jquery瀑布流](http://htmlpreview.github.io/?https://sunronglang.github.io/My-Project/project--3/index.html)<br>
 4、[JS瀑布流](http://htmlpreview.github.io/?https://sunronglang.github.io/My-Project/project--4/index.html)<br>
 5、[JS手风琴折叠菜单](http://htmlpreview.github.io/?https://sunronglang.github.io/My-Project/project--5/index.html)<br>
